@@ -1,0 +1,190 @@
+/* Réinitialisation des marges et des paddings par défaut du navigateur */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Fond gris clair */
+    display: flex;
+    flex-direction: column; /* Flexbox pour s'assurer que le footer est en bas */
+    min-height: 100vh; /* Assure que le body occupe 100% de la hauteur de la fenêtre */
+}
+
+main {
+    flex: 1; /* Le contenu principal s'étend pour prendre tout l'espace disponible */
+    padding: 20px; /* Ajoute du padding autour du contenu */
+}
+
+/* Styles pour le header */
+header {
+    display: flex;
+    justify-content: space-between; /* Espace entre les éléments du header */
+    align-items: center; /* Aligner verticalement les éléments */
+    padding: 15px 30px; /* Espacement interne */
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: white; /* Texte blanc */
+}
+
+/* Style pour le logo */
+.logo h1 {
+    font-size: 28px;
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Liste des liens de navigation */
+nav ul {
+    list-style: none; /* Retirer les puces des listes */
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+/* Styles pour les liens de navigation */
+nav ul li a {
+    text-decoration: none; /* Supprimer le soulignement */
+    color: white; /* Couleur blanche pour les liens */
+    font-size: 18px; /* Taille de police des liens */
+    transition: color 0.3s ease; /* Transition douce pour le hover */
+}
+
+/* Changement de couleur au survol des liens */
+nav ul li a:hover {
+    color: #ffdd57; /* Couleur jaune clair au survol */
+}
+
+/* Style pour la barre de recherche */
+.search-bar {
+    display: flex;
+    align-items: center; /* Aligner verticalement l'input et le bouton */
+    border: 1px solid white; /* Bordure blanche autour de la barre de recherche */
+    padding: 5px; /* Espacement interne */
+    border-radius: 5px; /* Angles arrondis */
+}
+
+/* Style pour l'input de recherche */
+.search-bar input {
+    border: none; /* Retirer les bordures */
+    padding: 5px; /* Espacement interne */
+    font-size: 16px; /* Taille de police */
+    border-radius: 5px; /* Angles arrondis */
+}
+
+/* Supprimer le contour bleu par défaut lors du focus */
+.search-bar input:focus {
+    outline: none;
+}
+
+/* Style pour le bouton de recherche */
+.search-bar button {
+    background-color: transparent; /* Bouton transparent */
+    border: none; /* Pas de bordure */
+    color: white; /* Couleur du texte blanche */
+    font-size: 18px; /* Taille du symbole de recherche */
+    cursor: pointer; /* Curseur pointer au survol */
+    margin-left: 5px; /* Petit espacement à gauche de l'input */
+    transition: color 0.3s ease; /* Transition douce pour la couleur */
+}
+
+/* Changement de couleur du bouton au survol */
+.search-bar button:hover {
+    color: #ffdd57; /* Couleur jaune clair au survol */
+}
+
+/* Styles pour la section contenant les images */
+.image-row {
+    display: flex; /* Utilise Flexbox pour aligner les images horizontalement */
+    justify-content: space-between; /* Espace égal entre les images */
+    align-items: center; /* Centre les images verticalement */
+    padding: 20px; /* Ajoute un padding autour de la bande d'images */
+    background-color: #f5f5f5; /* Couleur de fond gris clair pour la section */
+    border: 2px solid #4CAF50; /* Bordure verte autour de la bande */
+    border-radius: 15px; /* Ajoute des coins arrondis à la bordure */
+    margin: 20px; /* Ajoute un espacement autour de la bande */
+}
+
+.image-row img {
+    width: 200px; /* Fixe la largeur de chaque image */
+    height: auto; /* Garde le ratio d'aspect de chaque image */
+    border-radius: 10px; /* Ajoute des coins arrondis aux images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre aux images */
+    transition: transform 0.3s ease; /* Ajoute une transition douce pour l'animation */
+}
+
+/* Effet de zoom au survol des images */
+.image-row img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+/* Ajustement de la taille des images */
+.image-row img {
+    width: 200px; /* Largeur fixe des images */
+    height: 145px; /* Hauteur fixe des images */
+    object-fit: cover; /* Ajuste l'image à ces dimensions sans la déformer */
+}
+
+/* Styles pour la section des services */
+.services {
+    display: flex; /* Utilise Flexbox pour aligner les services horizontalement */
+    justify-content: space-between; /* Espace entre les services */
+    padding: 20px;
+    background-color: #f5f5f5; /* Fond gris clair */
+    margin-top: 20px;
+}
+
+.service {
+    width: 30%; /* Chaque service occupe environ 30% de la largeur */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour le design */
+    transition: transform 0.3s ease;
+}
+
+/* Effet de zoom au survol */
+.service:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+/* Styles pour le titre des services */
+.service h3 {
+    font-size: 22px;
+    color: #4CAF50; /* Couleur verte pour les titres */
+}
+
+/* Description du service avec texte tronqué */
+.description {
+    font-size: 16px;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Tronque le texte s'il est trop long */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre de lignes à afficher */
+    -webkit-box-orient: vertical;
+    height: 60px; /* Hauteur fixe pour garantir la même taille pour tous les services */
+}
+
+/* Style pour le lien */
+.service-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-link:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Footer */
+.footer {
+    background-color: #4CAF50; /* Fond vert pour le footer */
+    color: white; /* Texte en blanc */
+    text-align: center; /* Texte centré */
+    padding: 15px 0; /* Espacement en haut et en bas du texte */
+    font-size: 14px; /* Taille du texte */
+}

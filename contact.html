@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-nous - BloomPetals</title>
+
+    <!-- Styles CSS spécifiques pour le formulaire de contact -->
+    <style>
+        /* --- Styles pour la page contact.html --- */
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Conteneur global de la page */
+        .container {
+            max-width: 600px;
+            margin: 50px auto; /* Centrage de la page */
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère pour le conteneur */
+            border-radius: 10px; /* Coins arrondis */
+        }
+
+        /* Titre principal */
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        /* Style général du formulaire */
+        form {
+            display: flex;
+            flex-direction: column; /* Les éléments du formulaire sont empilés verticalement */
+        }
+
+        /* Style des labels */
+        label {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Style des champs de saisie */
+        input[type="text"], input[type="email"], input[type="submit"], select, textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box; /* Évite le débordement en incluant le padding dans la taille */
+        }
+
+        /* Style de la liste déroulante */
+        select {
+            appearance: none; /* Retire le style par défaut */
+        }
+
+        /* Style de la checkbox */
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        /* Style du bouton de soumission */
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Effet hover sur le bouton de soumission */
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Style du lien vers la politique de confidentialité */
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Conteneur du formulaire de contact -->
+<div class="container">
+    <h1>Contactez-nous</h1>
+
+    <!-- Formulaire de contact -->
+    <form action="#" method="POST">
+        <!-- Civilité (liste déroulante) -->
+        <label for="civilite">Civilité :</label>
+        <select name="civilite" id="civilite" required>
+            <option value="">Sélectionnez votre civilité</option>
+            <option value="mr">Monsieur</option>
+            <option value="mme">Madame</option>
+            <option value="mlle">Mademoiselle</option>
+        </select>
+
+        <!-- Nom du client -->
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+
+        <!-- Prénom du client -->
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
+
+        <!-- Adresse postale -->
+        <label for="adresse">Adresse postale :</label>
+        <textarea id="adresse" name="adresse" rows="4" placeholder="Entrez votre adresse postale" required></textarea>
+
+        <!-- Checkbox pour valider la politique de confidentialité -->
+        <label>
+            <input type="checkbox" name="confidentialite" required>
+            J'accepte la <a href="#">politique de confidentialité</a> de BloomPetals
+        </label>
+
+        <!-- Bouton de validation -->
+        <input type="submit" value="Envoyer">
+    </form>
+</div>
+
+</body>
+</html>

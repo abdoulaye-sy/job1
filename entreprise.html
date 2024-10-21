@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notre Équipe - BloomPetals</title>
+
+    <!-- Lien vers le fichier CSS externe (si tu as un fichier externe) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Styles CSS spécifiques à cette page -->
+    <style>
+        /* --- Styles pour la page entreprise.html --- */
+
+        /* Styles de base pour le corps de la page */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Couleur de fond de la page */
+            line-height: 1.6; /* Améliore la lisibilité du texte */
+        }
+
+        /* Header simple avec un fond vert */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center; /* Texte centré */
+        }
+
+        /* Section contenant la présentation de l'équipe */
+        .team-section {
+            padding: 50px;
+            text-align: center; /* Texte centré */
+        }
+
+        /* Titre principal de la section équipe */
+        .team-section h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        /* Description de l'équipe */
+        .team-section p {
+            font-size: 18px;
+            max-width: 800px; /* Limite la largeur du texte pour une meilleure lisibilité */
+            margin: 0 auto 50px; /* Centrage automatique et espacement inférieur */
+            color: #555; /* Couleur grisée pour le texte */
+        }
+
+        /* Conteneur Flexbox pour organiser les membres de l'équipe horizontalement */
+        .team-container {
+            display: flex; /* Utilisation de Flexbox */
+            justify-content: space-around; /* Espace égal autour des éléments */
+            flex-wrap: wrap; /* Les éléments passent à la ligne s'ils ne tiennent pas */
+        }
+
+        /* Carte pour chaque membre de l'équipe */
+        .team-member {
+            background-color: white;
+            border-radius: 10px; /* Coins arrondis */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère sous les cartes */
+            width: 300px; /* Largeur fixe des cartes */
+            margin: 20px; /* Espacement entre les cartes */
+            padding: 20px; /* Espacement interne */
+            transition: transform 0.3s; /* Transition pour l'effet de survol */
+        }
+
+        /* Effet d'agrandissement au survol des cartes */
+        .team-member:hover {
+            transform: scale(1.05); /* Agrandit légèrement la carte */
+        }
+
+        /* Image du membre de l'équipe */
+        .team-member img {
+            width: 100%; /* Image occupe toute la largeur de la carte */
+            border-radius: 10px; /* Coins arrondis pour l'image */
+        }
+
+        /* Nom des membres de l'équipe */
+        .team-member h3 {
+            margin-top: 15px; /* Espacement au-dessus du nom */
+            font-size: 22px;
+        }
+
+        /* Fonction des membres de l'équipe */
+        .team-member p {
+            font-size: 16px;
+            color: #777; /* Couleur de texte plus douce */
+        }
+
+        /* Footer simple */
+        footer {
+            background-color: #333; /* Fond sombre */
+            color: white; /* Texte en blanc */
+            text-align: center; /* Texte centré */
+            padding: 10px 0; /* Espacement vertical */
+            margin-top: 50px; /* Espacement avec le reste du contenu */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header avec le titre de la page -->
+<header>
+    <h1>Rencontrez notre Équipe BloomPetals</h1>
+</header>
+
+<!-- Section de présentation de l'équipe -->
+<section class="team-section">
+    <h1>Notre Équipe Passionnée</h1>
+    <!-- Description de l'équipe en paragraphe -->
+    <p>Chez BloomPetals, nous croyons en la créativité, la passion et l'innovation. Notre équipe est composée de professionnels dévoués à vous offrir les plus beaux bouquets pour toutes vos occasions spéciales. Voici les visages derrière notre succès !</p>
+
+    <!-- Conteneur Flexbox pour les cartes des membres de l'équipe -->
+    <div class="team-container">
+        <!-- Membre 1 -->
+        <div class="team-member">
+            <img src="photos de l'équipe/photos de l_équipe/photo1.jpg" alt="Membre 1 de l'équipe">
+            <h3>Alice Dupont</h3>
+            <p>Designer Floral</p>
+        </div>
+
+        <!-- Membre 2 -->
+        <div class="team-member">
+            <img src="photos de l'équipe/photos de l_équipe/photo1.jpg" alt="Membre 2 de l'équipe">
+            <h3>Jean Martin</h3>
+            <p>Directeur Créatif</p>
+        </div>
+
+        <!-- Membre 3 -->
+        <div class="team-member">
+            <img src="photos de l'équipe/photos de l_équipe/photo1.jpg" alt="Membre 3 de l'équipe">
+            <h3>Sarah Legrand</h3>
+            <p>Responsable des Événements</p>
+        </div>
+
+        <!-- Membre 4 -->
+        <div class="team-member">
+            <img src="photos de l'équipe/photos de l_équipe/photo1.jpg" alt="Membre 4 de l'équipe">
+            <h3>Luc Bernard</h3>
+            <p>Chef Fleuriste</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer de la page -->
+<footer>
+    <p>&copy; 2024 BloomPetals. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

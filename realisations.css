@@ -1,0 +1,91 @@
+/* --- Styles pour la page realisations.html --- */
+
+/* Styles de base pour le corps de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Titre de la page */
+header h1 {
+    font-size: 36px;
+}
+
+/* Section contenant la mosaïque */
+.io {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grille flexible */
+    grid-gap: 15px; /* Espace entre les éléments */
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centrer la mosaïque */
+}
+
+/* Chaque réalisation */
+.realisation {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour les réalisations */
+    transition: transform 0.3s ease; /* Effet de transition au survol */
+}
+
+/* Style des images à l'intérieur des réalisations */
+.realisation img {
+    width: 100%;
+    height: 500px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Remplit le conteneur tout en gardant le ratio */
+}
+
+
+/* Effet de zoom au survol */
+.realisation:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+}
+
+/* --- Partie responsive avec les media queries --- */
+
+/* Pour les petits écrans (tablettes, petits ordinateurs) */
+@media (max-width: 768px) {
+    /* Ajuster la taille du titre */
+    header h1 {
+        font-size: 28px; /* Réduire la taille du texte pour les écrans plus petits */
+    }
+
+    /* Réduire les marges et le padding de la mosaïque pour mieux utiliser l'espace */
+    .mosaic {
+        padding: 20px;
+    }
+
+    /* La grille aura maintenant 2 colonnes au lieu de 3 pour les petits écrans */
+    .mosaic {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grille à 2 colonnes */
+    }
+}
+
+/* Pour les très petits écrans (mobiles, petits téléphones) */
+@media (max-width: 480px) {
+    /* Taille du texte dans le header encore plus petite */
+    header h1 {
+        font-size: 24px; /* Texte plus petit pour les téléphones */
+    }
+
+    /* Ajustement du padding pour les téléphones */
+    .mosaic {
+        padding: 10px;
+    }
+
+    /* La grille aura maintenant 1 seule colonne sur les très petits écrans */
+    .mosaic {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grille à 1 colonne pour les mobiles */
+    }
+}
